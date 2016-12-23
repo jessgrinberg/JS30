@@ -1,16 +1,25 @@
 body {
-	background: pink;
-	font-size: 2rem;
+	background: #003973; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #003973 , #E5E5BE); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #003973 , #E5E5BE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+	font-size: 1.5rem;
     display:flex;
     flex:1;
+    align-items:center;
     min-height: 100vh;
-    align-items: center;
+    font-family: 'Playfair Display', serif;
+
+}
+
+h1 {
+	color: #003973;
+	margin-left: 1rem;
 }
 
 .clock {
 	width: 30rem;
     height: 30rem;
-    border:20px solid white;
+    border:20px solid #E5E5BE;
     border-radius:50%;
     margin: 50px auto;
     position: relative;
@@ -25,7 +34,7 @@ body {
 }
 
 .hand {
-	background: black;
+	background: #003973;
 	width: 50%;
 	height: 6px;
 	position: absolute;
@@ -34,4 +43,32 @@ body {
 	transform:rotate(90deg);
 	transition: all 0.05s;
 	transition-timing-function: cubic-bezier(0.25, 0.1, 0, 2.24);
+}
+
+@media screen and (max-width: 792px) {
+	.clock {
+  		width: 20rem;
+    	height: 20rem;
+        border:15px solid #E5E5BE;
+  	}
+  	body {
+  		font-size: 1rem;
+  	}
+  	.hand {
+  		height: 4px;
+  	}
+}
+
+@media screen and (max-width: 566px) {
+	.clock {
+  		width:10rem;
+    	height:10rem;
+        border:6px solid #E5E5BE;
+  	}
+  	body {
+  		font-size: 0.75rem;
+  	}
+  	.hand {
+  		height: 3px;
+  	}
 }
