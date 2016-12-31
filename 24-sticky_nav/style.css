@@ -77,6 +77,12 @@ li.logo {
   font-size: 30px;
 }
 
+.fixed-nav li.logo {
+  max-width: 500px;
+/*  didnt use width to make transition possible,
+   you have to use max-width*/
+}
+
 li.logo a {
   color:black;
 }
