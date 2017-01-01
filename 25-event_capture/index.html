@@ -43,7 +43,9 @@ function logText(e) {
   console.log(this.classList.value); //bubbling
 }
 
-divs.forEach(div => div.addEventListener('click', logText));
+divs.forEach(div => div.addEventListener('click', logText, {
+  capture: true
+}));
 
 </script>
 
